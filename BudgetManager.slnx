@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="src/BudgetManager.Application/BudgetManager.Application.csproj" Id="25b3969a-cf74-428d-a7f3-a6fad1ec4a51" />
+  <Project Path="src/BudgetManager.Domain/BudgetManager.Domain.csproj" Id="22387595-a0b8-4cba-9153-b200871b3683" />
+  <Project Path="src/BudgetManager.Infrastructure/BudgetManager.Infrastructure.csproj" Id="9460c589-7f82-4170-82dd-58bf42f19b14" />
+  <Project Path="src/BudgetManager.WebApi/BudgetManager.WebApi.csproj" Id="1ef9f8a5-03e6-4227-8112-f2860d3b3b2f" />
+</Solution>

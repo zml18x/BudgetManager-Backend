@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.idea/.idea.BudgetManager/.idea
+/src/BudgetManager.WebApi/budgetmanager.db

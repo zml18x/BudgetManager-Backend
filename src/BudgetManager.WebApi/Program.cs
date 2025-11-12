@@ -1,7 +1,9 @@
+using Serilog;
+using Scalar.AspNetCore;
 using BudgetManager.Application.Container;
 using BudgetManager.Infrastructure.Container;
 using BudgetManager.Infrastructure.Data;
-using Serilog;
+using BudgetManager.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,11 +23,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.MapGroup("auth")
+    .MapIdentityApi<User>();
 
 app.MapControllers();
 

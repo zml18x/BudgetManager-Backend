@@ -1,12 +1,16 @@
-using BudgetManager.Infrastructure.Data;
-using BudgetManager.Infrastructure.Container;
 using BudgetManager.Application.Container;
+using BudgetManager.Infrastructure.Container;
+using BudgetManager.Infrastructure.Data;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
     .AddInfrastructure()
     .AddApplication();
+
+builder.Host.UseSerilog((context, loggerConfig) =>
+    loggerConfig.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddControllers();
 
